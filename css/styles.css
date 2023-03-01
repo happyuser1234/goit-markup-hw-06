@@ -300,7 +300,7 @@ body {
   border-radius: 4px;
 }
 
-/*a для иконки-то в чем сидит иконка*/
+/*a для иконки-то в чем сидит иконка(крестик)*/
 .hero-svg {
   position: absolute;
   top: 24px;
@@ -322,6 +322,50 @@ body {
   background-color: var(--background-color-5);
 }
 
+/*форма в модальном окне*/
+.hero-form {
+  width: 408px;
+  outline: 2px solid red;
+  padding-top: 72px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+/*заголовок в форме*/
+.hero-form-title {
+  font-weight: var(--typical-font-weight);
+  line-height: var(--first-line-height);
+  text-align: center;
+  letter-spacing: var(--first-letter-spacing);
+  color: var(--second-color);
+
+  margin-bottom: 34px;
+}
+
+/*поле*/
+.form-field {
+  position: relative;
+  outline: 2px solid green;
+
+  margin-bottom: 8px;
+}
+.form-label {
+  position: absolute;
+
+  background-color: green;
+}
+
+/*элемент для создания поля ввода*/
+.form-input {
+  outline: 3px solid orange;
+  width: 100%;
+  border: 1px solid #4d5ae5;
+  border-radius: 4px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left: 16px;
+  margin: 0;
+}
 /*======================/HERO============================*/
 /*====================SOLUTIONS==========================*/
 
