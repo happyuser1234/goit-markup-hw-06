@@ -71,6 +71,7 @@ body {
   --fifth-color: #f4f4fd;
   --sixth-color: #e7e9fc;
   --seventh-color: #8e8f99;
+  --eighth-color: #757575;
   --next-color: #f4f4fd;
   --text-color: #434455;
 
@@ -95,11 +96,13 @@ body {
   --first-letter-spacing: 0.02em;
   --second-letter-spacing: 0.03em;
   --third-letter-spacing: 0.04em;
+  --fourth-letter-spacing: 0.01em;
 
   --first-font-size: 20px;
   --second-font-size: 18px;
   --third-font-size: 56px;
   --fourth-font-size: 36px;
+  --fifth-font-size: 12px;
 }
 
 /*======================HEADER===========================*/
@@ -193,7 +196,6 @@ body {
 
 /*a ccылка для емейла и телефона */
 .header-contact-link {
-  font-size: var(font-size);
   line-height: var(--first-line-height);
   letter-spacing: var(--first-letter-spacing);
   color: var(--text-color);
@@ -325,7 +327,6 @@ body {
 /*форма в модальном окне*/
 .hero-form {
   width: 408px;
-  outline: 2px solid red;
   padding-top: 72px;
   padding-left: 24px;
   padding-right: 24px;
@@ -344,27 +345,112 @@ body {
 
 /*поле*/
 .form-field {
-  position: relative;
-  outline: 2px solid green;
-
   margin-bottom: 8px;
 }
-.form-label {
-  position: absolute;
 
-  background-color: green;
+/*метка,связывающая текст метки и элемент формы*/
+.form-label {
+  font-size: var(--fifth-font-size);
+  line-height: var(--third-line-height);
+  letter-spacing: var(--fourth-letter-spacing);
+  color: var(--seventh-color);
 }
 
+.form-wrapper {
+  position: relative;
+}
 /*элемент для создания поля ввода*/
 .form-input {
-  outline: 3px solid orange;
   width: 100%;
   border: 1px solid #4d5ae5;
   border-radius: 4px;
   padding-top: 11px;
   padding-bottom: 11px;
-  padding-left: 16px;
+  padding-left: 38px;
   margin: 0;
+}
+.form-svg {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  left: 16px;
+  top: 8px;
+  bottom: 8px;
+}
+.form-input:focus + .form-svg {
+  fill: var(--background-color-4);
+}
+.form-comment {
+  width: 100%;
+  min-height: 120px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  line-height: var(--third-line-height);
+  letter-spacing: var(--third-letter-spacing);
+  color: rgba(117, 117, 117, 0.5);
+}
+textarea {
+  resize: none;
+}
+/*div в котором находиться чекбокс*/
+.hero-form-checkbox {
+  margin-bottom: 24px;
+}
+
+/*label для чекбокса*/
+.form-label-checkbox {
+  display: block;
+  font-size: 12px;
+  line-height: var(--third-line-height);
+  letter-spacing: var(--third-letter-spacing);
+  color: var(--eighth-color);
+}
+
+/*input(элемент для создания поля определенного типа(чекбокс))*/
+.form-checkbox {
+  appearance: none;
+  position: absolute;
+}
+/*иконка-заменитель(svg) чекбокса*/
+.checkbox-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 1.25px solid #404bbf;
+  border-radius: 2px;
+
+  background-color: #f4f4fd;
+  margin-right: 8px;
+}
+
+/*при нажатии на чекбокс меняется цвет соседа svg*/
+.form-checkbox:checked + .checkbox-icon {
+  background-color: #404bbf;
+}
+
+/*цвет ссылки в части текста */
+.form-link {
+  color: var(--background-color-4);
+}
+.form-btn {
+  min-width: 169px;
+  padding: 16px 32px;
+  border: none;
+
+  letter-spacing: var(--third-letter-spacing);
+  font-weight: var(--typical-font-weight);
+  line-height: var(--first-line-height);
+  color: var(--first-color);
+
+  background-color: var(--background-color-4);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  margin-bottom: 24px;
 }
 /*======================/HERO============================*/
 /*====================SOLUTIONS==========================*/
@@ -710,6 +796,7 @@ body {
   align-items: center;
   padding: 8px 24px;
   gap: 16px;
+  border: none;
 
   border-radius: 4px;
   background-color: var(--background-color-4);
