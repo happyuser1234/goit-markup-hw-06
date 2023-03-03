@@ -318,10 +318,15 @@ body {
 
   align-items: center;
   justify-content: center;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-svg:hover {
   background-color: var(--background-color-5);
+  fill: var(--first-color);
 }
 
 /*форма в модальном окне*/
@@ -359,16 +364,17 @@ body {
 .form-wrapper {
   position: relative;
 }
-/*элемент для создания поля ввода*/
+/*input-элемент для создания поля ввода*/
 .form-input {
   width: 100%;
-  border: 1px solid #4d5ae5;
+  border: 1px solid var(--fourth-color);
   border-radius: 4px;
   padding-top: 11px;
   padding-bottom: 11px;
   padding-left: 38px;
   margin: 0;
 }
+/*svg-иконки в input-тах формы*/
 .form-svg {
   position: absolute;
   display: flex;
@@ -378,7 +384,12 @@ body {
   left: 16px;
   top: 8px;
   bottom: 8px;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+/*когда input в фокусе меняется fill соседа-svg-иконки*/
 .form-input:focus + .form-svg {
   fill: var(--background-color-4);
 }
@@ -420,21 +431,33 @@ textarea {
   display: inline-block;
   width: 16px;
   height: 16px;
-  border: 1.25px solid #404bbf;
+  border: 1.25px solid var(--third-color);
   border-radius: 2px;
 
-  background-color: #f4f4fd;
+  background-color: var(--fifth-color);
   margin-right: 8px;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/*при нажатии на чекбокс меняется цвет соседа svg*/
+/*при нажатии на чекбокс меняется цвет соседа svg-иконки-заменителя*/
 .form-checkbox:checked + .checkbox-icon {
-  background-color: #404bbf;
+  background-color: var(--background-color-5);
+  background-image: url(../images/click.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /*цвет ссылки в части текста */
 .form-link {
   color: var(--background-color-4);
+}
+.form-wrapper-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .form-btn {
   min-width: 169px;
