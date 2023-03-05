@@ -457,7 +457,7 @@ textarea {
   display: inline-block;
   width: 16px;
   height: 16px;
-  border: 1.25px solid var(--third-color);
+  border: 1.25px solid #2e2f42;
   border-radius: 2px;
 
   background-color: var(--fifth-color);
@@ -786,12 +786,14 @@ textarea {
 
 /*h3-подзаголовок списка ссылок соцсетей*/
 .footer-titel {
+  margin-bottom: 16px;
+
   font-weight: var(--typical-font-weight);
-  line-height: 1.5;
+  line-height: var(--first-line-height);
   letter-spacing: var(--first-letter-spacing);
   color: var(--first-color);
-  margin-bottom: 16px;
 }
+
 /*ul для ссылок соцсетей*/
 .footer-list {
   display: flex;
@@ -826,11 +828,21 @@ textarea {
   fill: currentColor;
 }
 
-/*
-.footer-form {
-  display: ;
-}*/
+/*текст-заголовок в форме футера*/
+.footer-form-text {
+  margin-bottom: 16px;
 
+  font-weight: var(--typical-font-weight);
+  line-height: var(--first-line-height);
+  letter-spacing: var(--first-letter-spacing);
+  color: var(--first-color);
+}
+/*форма,которая включает в себя input и button*/
+.footer-form {
+  display: inline-flex;
+}
+
+/*input у которого фиксированная высота*/
 .footer-input-email {
   margin-right: 24px;
   width: 264px;
