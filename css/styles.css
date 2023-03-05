@@ -89,6 +89,7 @@ body {
   --third-line-height: 1.2;
   --fours-line-height: 1.07;
   --fifth-line-height: 1.11;
+  --sixth-line-height: 2;
 
   --typical-font-weight: 500;
   --first-font-weight: 800;
@@ -376,8 +377,7 @@ body {
   padding-bottom: 11px;
   padding-left: 38px;
   margin: 0;
-
-  border: none;
+  outline: none;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -387,7 +387,7 @@ body {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-input:focus {
-  border: var(--background-color-4);
+  border-color: var(--background-color-4);
 }
 
 /*svg-иконки в input-тах формы*/
@@ -418,6 +418,7 @@ body {
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  outline: none;
 
   line-height: var(--third-line-height);
   letter-spacing: var(--third-letter-spacing);
@@ -428,6 +429,9 @@ body {
 }
 textarea {
   resize: none;
+}
+.form-comment:focus {
+  border-color: var(--background-color-4);
 }
 /*div в котором находиться чекбокс*/
 .hero-form-checkbox {
@@ -822,11 +826,21 @@ textarea {
   fill: currentColor;
 }
 
+/*
+.footer-form {
+  display: ;
+}*/
+
 .footer-input-email {
   margin-right: 24px;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  width: 264px;
+  height: 40px;
   padding-left: 16px;
+
+  font-size: var(--fifth-font-size);
+  line-height: var(--sixth-line-height);
+  letter-spacing: var(--third-letter-spacing);
+  color: rgba(255, 255, 255, 0.6);
 
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
